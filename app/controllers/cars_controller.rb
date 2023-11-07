@@ -3,11 +3,12 @@ class CarsController < ApplicationController
 
   # GET /cars or /cars.json
   def index
-    @cars = Car.all
+    @cars = Car.all #here you access to the model, with (all) you access all  objects of the model cars
   end
 
   # GET /cars/1 or /cars/1.json
   def show
+    render json: @car, status: 200
   end
 
   # GET /cars/new
